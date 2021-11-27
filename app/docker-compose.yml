@@ -1,8 +1,7 @@
 version: "3.0"
 services:
-    app:
+    image_aug:
+      container_name: image_aug_flask_app
       build: .
       ports:
         - "8000:8000"
-      volumes:
-        - .:/app
