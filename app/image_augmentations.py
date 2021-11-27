@@ -3,7 +3,7 @@ import random
 
 
 def random_augmentation(image: Image):
-    augmentations = [rotate, fliplr, do_nothing]
+    augmentations = [rotate, fliplr, do_nothing, zoom]
     func = random.choice(augmentations)
     return func(image)
 
@@ -18,3 +18,7 @@ def fliplr(image: Image):
 
 def rotate(image: Image):
     return image.rotate(random.randint(0, 365))
+
+
+def zoom(image: Image):
+    return image.transform(image.size, Image.EXTENT, data=(0, 1, image.width // 1.5, image.height // 1.5))
