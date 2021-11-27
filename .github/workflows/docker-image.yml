@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s) -p "8000:8000"
+      run: docker build . --file Dockerfile --tag img_aug_app:$(date +%s)
