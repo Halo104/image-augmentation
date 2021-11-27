@@ -12,7 +12,10 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
 
     steps:
     - uses: actions/checkout@v2
@@ -25,7 +28,7 @@ jobs:
         python -m pip install --upgrade pip
         cd app
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test with pytest
+    - name: Test with unittest and test.py
       run: |
         cd app
         python -m unittest -v tests.py
