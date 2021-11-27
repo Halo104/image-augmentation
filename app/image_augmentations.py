@@ -21,4 +21,5 @@ def rotate(image: Image):
 
 
 def zoom(image: Image):
-    return image.transform(image.size, Image.EXTENT, data=(0, 1, image.width // 1.5, image.height // 1.5))
+    zoomRatio = 1.5
+    return image.transform(image.size, Image.EXTENT, data=(0, 1, image.width // zoomRatio, image.height // zoomRatio))
