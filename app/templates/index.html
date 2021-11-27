@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Index</title>
-</head>
-<body>
-    <img src="{{ url_for('static', filename='augmented_image.jpg') }}" alt="User Image">
-</body>
+    <head>
+        <title>Image augmentation</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Random Image Augmentation</h1>
+        <p>
+            This website is designed to conduct one of four different image augmentation techniques to your choice of image.
+            The only requirement is to have your image accessible through a URL and follow the instructions below.
+        </p>
+        <h3>Enter URL</h3>
+        <p>
+            Please enter an image URL to send an image and get the app to work, as follow:<br>
+            <br>http://0.0.0.0:8000/?url=&lt;image_url&gt;<br>
+            <br>for example:<br>
+            <br>http://0.0.0.0:8000/?url=https://imgs.xkcd.com/comics/bad_code.png<br>
+        </p>
+    </body>
 </html>
