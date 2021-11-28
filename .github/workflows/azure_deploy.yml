@@ -44,13 +44,9 @@ jobs:
         name: python-app
         path: .
     
-    - name: Log in to Azure CLI
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_SERVICE_PRINCIPAL }}
-
     - name: Building web app
       uses: azure/appservice-build@v2
+      
     - name: Deploy web App using GH Action azure/webapps-deploy
       uses: azure/webapps-deploy@v2
       with:
