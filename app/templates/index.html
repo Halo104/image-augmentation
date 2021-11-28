@@ -3,6 +3,8 @@
     <head>
         <title>Image augmentation</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+
     </head>
     <body>
         <h1>Random Image Augmentation</h1>
@@ -12,10 +14,29 @@
         </p>
         <h3>Enter URL</h3>
         <p>
-            Please enter an image URL to send an image and get the app to work, as follow:<br>
+            Please enter an image URL to send an image and get the app to work, if you are hosting it locally then follow the
+            first set of instructions. If it has been hosted on azure then follow the second set of instructions.<br>
+
+            <br><strong>Hosted locally:</strong>
             <br>http://0.0.0.0:8000/?url=&lt;image_url&gt; or http://localhost:8000/?url=&lt;image_url&gt;<br>
             <br>for example:<br>
-            <br>http://0.0.0.0:8000/?url=https://imgs.xkcd.com/comics/bad_code.png or http://localhost:8000/?url=https://imgs.xkcd.com/comics/bad_code.png<br>
+            <br>
+            <a href="http://0.0.0.0:8000/?url=https://secureservercdn.net/160.153.138.219/k58.7f8.myftpupload.com/wp-content/uploads/2020/11/Object-and-material-INDUSTRIAL.png">
+                http://0.0.0.0:8000/?url=https://secureservercdn.net/160.153.138.219/k58.7f8.myftpupload.com/wp-content/uploads/2020/11/Object-and-material-INDUSTRIAL.png </a>
+            <br>
+            or
+            <br>
+            <a href="http://localhost:8000/?url=https://secureservercdn.net/160.153.138.219/k58.7f8.myftpupload.com/wp-content/uploads/2020/11/Object-and-material-INDUSTRIAL.png">
+                http://localhost:8000/?url=https://secureservercdn.net/160.153.138.219/k58.7f8.myftpupload.com/wp-content/uploads/2020/11/Object-and-material-INDUSTRIAL.png
+            </a><br>
+
+            <br><strong>Hosted on Azure:</strong>
+            <br>https://recycleye-image-augmentation.azurewebsites.net/?url=&lt;image_url&gt;<br>
+            <br>for example:<br>
+            <br>
+            <a href="https://recycleye-image-augmentation.azurewebsites.net/?url=https://secureservercdn.net/160.153.138.219/k58.7f8.myftpupload.com/wp-content/uploads/2020/11/Object-and-material-INDUSTRIAL.png">
+                https://recycleye-image-augmentation.azurewebsites.net/?url=https://secureservercdn.net/160.153.138.219/k58.7f8.myftpupload.com/wp-content/uploads/2020/11/Object-and-material-INDUSTRIAL.png</a>
+            <br>
         </p>
     </body>
 </html>
