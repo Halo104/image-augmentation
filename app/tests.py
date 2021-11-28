@@ -26,9 +26,6 @@ class ImageAugmentationsTest(unittest.TestCase):
                 self.assertEqual(r, g, "red and green should be same value")
                 self.assertEqual(r, b, "red and blue should be same value")
 
-        #Another method of testing for greyscale, by assuming only one colour band exists
-        #self.assertEqual(len(test_image.getbands()), 1, "Should have only 1 band")
-
 
 if __name__ == '__main__':
     # Run all the tests
