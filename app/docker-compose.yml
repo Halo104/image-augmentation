@@ -4,4 +4,4 @@ services:
       container_name: image_aug_flask_app
       build: .
       ports:
-        - "8000:8000"
+        - "0.0.0.0:8000:8000"
