@@ -28,6 +28,10 @@ http://0.0.0.0:8000/?url=https://imgs.xkcd.com/comics/bad_code.png
 - Go to the directory where the docker-compose.yml file is located
 - Run ``` docker-compose up ``` to build and run the dockerfile
 
+## How to visit Azure host of the app
+- Hosted on: https://recycleye-image-augmentation.azurewebsites.net/
+- Based on the code in this GitHub repo
+
 ## Dependencies
 - Docker 20.10.10
 - Docker compose 3.0
