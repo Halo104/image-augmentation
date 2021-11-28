@@ -13,7 +13,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['MAX_CONTENT_LENGTH'] = 4 * 1024 * 1024
 
 
-# Default route just shows simple text
+# Default route to handle showing the default, URL and error pages
 @app.route('/', methods=['GET'])
 def index():
     image_url = request.args.get('url')
@@ -26,7 +26,7 @@ def index():
         augmented_image.convert('RGB').save("static/augmented_image.jpg")
         return render_template("image_augment.html")
     except Exception as message:
-        return render_template("errorHandling.html", message=message)
+        return render_template("error_handling.html", message=message)
 
 
 if __name__ == '__main__':
