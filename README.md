@@ -24,7 +24,7 @@ http://0.0.0.0:8000/?url=https://imgs.xkcd.com/comics/bad_code.png
 2) Dependencies 
 3) Run down of each of the tasks
 
-## How to start the app
+## How to start the app locally
 - Go to the directory where the docker-compose.yml file is located
 - Run ``` docker-compose up ``` to build and run the dockerfile
 
@@ -58,7 +58,7 @@ ENV MAX_CONTENT_LENGTH=4194304
 ```
 
 ### Use github actions to build the dockerfile.
-- Two GitHub actions workflow was created and added in .github/workflows
+- Three GitHub actions workflow was created and added in .github/workflows
 - The first is docker-image.yml, which builds the dockerfile in two OS, this being
   windows and linux.
   - By adding the GitHub actions, it allows the main user to know if certain changes
@@ -71,7 +71,10 @@ ENV MAX_CONTENT_LENGTH=4194304
   - Given the advantages of having GitHub actions, it made sense in addition to building
     the dockerfile to also be running general tests on the python files written for the app.     
   - Additional python tests could be added as they are created.
-    
+- The third is azure_deploy.yml, which allows the app to be deployed and on an azure server
+  so that it can be viewed live. It can be accessed by the hyperlink:
+  https://recycleye-image-augmentation.azurewebsites.net/
+
 ### Add an image augmentation function image_augmentations.py
 - Two augmentation ideas was thought up, one is to slightly zoom into the image while the
   second is to convert the image to greyscale.
